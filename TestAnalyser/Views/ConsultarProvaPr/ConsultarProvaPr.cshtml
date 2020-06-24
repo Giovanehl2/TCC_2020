@@ -248,7 +248,7 @@
                 <input class="novep" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
             </div>
             <div class="col-lg-4">
-                <button witdh="50" title="Editar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#EditarProva">Editar</button>
+                <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarProva()">Editar</button>
                 <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ExcluirProva">Excluir</button>
                 <button witdh="50" title="Vincular" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VincularProva">Vincular</button>
             </div>
@@ -258,7 +258,7 @@
                 <input class="novep" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
             </div>
             <div class="col-lg-4">
-                <button witdh="50" title="Editar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#EditarProva">Editar</button>
+                <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarProva()">Editar</button>
                 <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ExcluirProva">Excluir</button>
                 <button witdh="50" title="Vincular" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VincularProva">Vincular</button>
             </div>
@@ -327,6 +327,10 @@
     function ExcluirProva() {
         console.log("Prova deletada...");
         $('#ExcluirProva').modal('hide');
+    }
+
+    function EditarProva() {
+        location.href = "http://localhost:54994/GerarProva/GerarProva";
     }
 
     var div1 = document.getElementById('divGridConsultaPr'),
