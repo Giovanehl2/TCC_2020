@@ -285,6 +285,7 @@
     <Content Include="Views\Configuracoes\Configuracoes.cshtml" />
     <Content Include="Views\ConsultarQuestoes\ConsultarQuestoes.cshtml" />
     <Content Include="Views\ProvasAgendadas\ProvasAgendadas.cshtml" />
+    <Content Include="Views\ConsultarProvaAl\RealizarProva.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
