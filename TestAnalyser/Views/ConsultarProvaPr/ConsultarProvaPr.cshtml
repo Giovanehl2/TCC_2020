@@ -84,62 +84,69 @@
     <div class="modal-dialog novep">
         <div class="modal-content">
             <div>
-                <h2>Questão 1</h2>
-                <form method="post">
-                    <fieldset>
-                        <div style="margin-left: 100px;">
-                            <br />
-                            <div class="col-lg-9">
-                                <h3>Questão: </h3>
-                                <textarea class="oitop" cols="30" rows="5" wrap="hard" name="DTquestao" id="DTquestao" placeholder="Quato é 1 + 1?"></textarea>
-                            </div>
-                        </div>
 
-                        <br />
-                        <div>
-                            <div style="margin-left: 100px;" class="col-lg-9">
-                                <br />
-                                <h4>Resposta: </h4>
-                                <textarea class="oitop" cols="30" rows="5" wrap="hard" name="DTreposta" id="DTreposta" placeholder="42"></textarea>
-                            </div>
-                            <div style="margin-left: 100px;" class="col-lg-3">
+                <div class="container">
+                    <br />
 
-                            </div>
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h5>Questão 1</h5>
                         </div>
-                        <br />
-                    </fieldset>
-                </form>
-            </div>
-            <div>
-                <h2>Questão 2</h2>
-                <form method="post">
-                    <fieldset>
-                        <div style="margin-left: 100px;">
-                            <br />
-                            <div class="col-lg-9">
-                                <h3>Questão: </h3>
-                                <textarea class="oitop" cols="30" rows="5" wrap="hard" name="DTquestao" id="DTquestao"></textarea>
-                            </div>
-                        </div>
+                    </div>
 
-                        <br />
-                        <div>
-                            <div style="margin-left: 100px;" class="col-lg-9">
-                                <br />
-                                <h4>Resposta: </h4>
-                                <textarea class="oitop" cols="30" rows="5" wrap="hard" name="DTreposta" id="DTreposta"></textarea>
-                            </div>
-                            <div style="margin-left: 100px;" class="col-lg-3">
-
-                            </div>
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <input class="form-control" id="questao1" type="text" value="Quanto é 1 + 1" disabled>
                         </div>
-                        <br />
-                    </fieldset>
-                </form>
-            </div>
-            <div>
-                <label>&nbsp;</label>
-                <button witdh="50" title="Fechar" class="btn btn-default btn-sm btn-diss" data-dismiss="modal">Fechar</button>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h5>Resposta 1</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <input class="form-control" id="resposta1" type="text" value="42" disabled>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h5>Questão 2</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <input class="form-control" id="questao1" type="text" value="Quanto é 2 * 2" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h5>Resposta 2</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <input class="form-control" id="resposta1" type="text" value="4" disabled>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <button witdh="50" title="Fechar" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                    <br />
+                </div>
             </div>
         </div>
     </div>
@@ -150,89 +157,42 @@
 <div class="modal fade novep" id="CorrigirProva">
     <div class="modal-dialog novep">
         <div class="modal-content">
-            <div>
-                <h2>Questão 1</h2>
-                <form method="post">
-                    <fieldset>
-                        <div style="margin-left: 100px;">
-                            <br />
-                            <div class="col-lg-9">
-                                <h3>Questão: </h3>
-                                <textarea class="oitop" cols="30" rows="5" wrap="hard" name="DTquestao" id="DTquestao" placeholder="Quato é 1 + 1?"></textarea>
-                            </div>
+            <div class="container">
+                <br />
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-10 offset-md-1">
+                            <h5>Questão 1</h5>
+                            <input class="form-control" id="questao1" type="text" value="Quanto é 1 + 1" disabled>
                         </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-10 offset-md-1">
+                            <h5>Resposta 1</h5>
+                            <textarea class="form-control" id="resposta1">42</textarea>
+                        </div>
+                    </div>
 
-                        <br />
-                        <div>
-                            <div style="margin-left: 100px;" class="col-lg-9">
-                                <br />
-                                <h4>Resposta: </h4>
-                                <textarea class="oitop" cols="30" rows="5" wrap="hard" name="DTreposta" id="DTreposta" placeholder="42"></textarea>
-                            </div>
-                            <div style="margin-left: 100px;" class="col-lg-3">
-
-                            </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-10 offset-md-1">
+                            <h5>Questão 2</h5>
+                            <input class="form-control" id="questao2" type="text" value="Quanto é 2 * 2" disabled>
                         </div>
-                        <div style="margin-left: 100px;">
-                            <br />
-                            <div class="col-lg-9">
-                                <h3>Observações: </h3>
-                                <textarea class="oitop" cols="30" rows="5" wrap="hard" name="ObsResp" id="ObsResp" placeholder="observações do professor..."></textarea>
-                            </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-10 offset-md-1">
+                            <h5>Resposta 2</h5>
+                            <textarea class="form-control" id="resposta2">4</textarea>
                         </div>
-
-                        <br />
-                        <div>
-                            <br />
-                            <label>&nbsp;</label>
-                            <button witdh="50" title="Salvar" class="btn btn-default btn-sm btn-diss" onclick="SalvarQuestão()">Salvar</button>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-10 offset-md-1">
+                            <button witdh="50" title="Fechar" class="btn btn-primary" data-dismiss="modal">Salvar</button>
+                            <button witdh="50" title="Fechar" class="btn btn-danger" data-dismiss="modal">Fechar</button>
                         </div>
-                    </fieldset>
+                    </div>
+                    <br />
                 </form>
-            </div>
-            <div>
-                <h2>Questão 2</h2>
-                <form method="post">
-                    <fieldset>
-                        <div style="margin-left: 100px;">
-                            <br />
-                            <div class="col-lg-9">
-                                <h3>Questão: </h3>
-                                <textarea class="oitop" cols="30" rows="5" wrap="hard" name="DTquestao" id="DTquestao"></textarea>
-                            </div>
-                        </div>
-
-                        <br />
-                        <div>
-                            <div style="margin-left: 100px;" class="col-lg-9">
-                                <br />
-                                <h4>Resposta: </h4>
-                                <textarea class="oitop" cols="30" rows="5" wrap="hard" name="DTreposta" id="DTreposta"></textarea>
-                            </div>
-                            <div style="margin-left: 100px;" class="col-lg-3">
-
-                            </div>
-                        </div>
-                        <div style="margin-left: 100px;">
-                            <br />
-                            <div class="col-lg-9">
-                                <h3>Observações: </h3>
-                                <textarea class="oitop" cols="30" rows="5" wrap="hard" name="ObsResp" id="ObsResp"></textarea>
-                            </div>
-                        </div>
-
-                        <br />
-                        <div>
-                            <br />
-                            <label>&nbsp;</label>
-                            <button witdh="50" title="Salvar" class="btn btn-default btn-sm btn-diss" onclick="SalvarQuestão()">Salvar</button>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-            <div>
-                <label>&nbsp;</label>
-                <button witdh="50" title="Salvar" class="btn btn-default btn-sm btn-diss" data-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>
@@ -250,7 +210,7 @@
             <div class="col-lg-4">
                 <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarProva()">Editar</button>
                 <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ExcluirProva">Excluir</button>
-                <button witdh="50" title="Vincular" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VincularProva">Vincular</button>
+                <button witdh="50" title="Vincular" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ExcluirProva">Vincular</button>
             </div>
         </div>
         <div>
@@ -260,58 +220,7 @@
             <div class="col-lg-4">
                 <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarProva()">Editar</button>
                 <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ExcluirProva">Excluir</button>
-                <button witdh="50" title="Vincular" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VincularProva">Vincular</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" id="VincularProva">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title">Vincular Prova:</h4>
-            </div>
-            <div class="modal-body">
-                <table>
-                    <tr>
-                        <th>Turmas</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select class="form-control" id="Turmas" name="Turmas">
-                                <option>Selecione</option>
-                                <option>Turma1</option>
-                                <option>Turma2</option>
-                            </select>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="VincularProva()">Vincular</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Voltar</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-@* Modal para confirmar exclusão *@
-<div class="modal fade" id="ExcluirProva">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title">Excluir Prova:</h4>
-            </div>
-            <div class="modal-body">
-                <p>Você deseja Excluir essa prova?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="ExcluirProva()">Sim</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Voltar</button>
+                <button witdh="50" title="Vincular" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ExcluirProva">Vincular</button>
             </div>
         </div>
     </div>
@@ -319,6 +228,7 @@
 
 <script>
 
+<<<<<<< Updated upstream
     function VincularProva() {
         console.log("Prova vinculada...");
         $('#VincularProva').modal('hide');
@@ -333,8 +243,10 @@
         location.href = "http://localhost:54994/GerarProva/GerarProva";
     }
 
+=======
+>>>>>>> Stashed changes
     var div1 = document.getElementById('divGridConsultaPr'),
-    div2 = document.getElementById('divGridConsultaProvaPend');
+        div2 = document.getElementById('divGridConsultaProvaPend');
     function switchVisible() {
         if (!div1) return;
         if (getComputedStyle(div1).display == 'block') {

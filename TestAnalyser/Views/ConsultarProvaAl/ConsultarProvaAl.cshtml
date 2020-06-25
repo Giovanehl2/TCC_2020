@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "ConsultarProvaAl";
 }
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> @*//remover*@
@@ -27,7 +26,7 @@
                 </select>
             </td>
             <td>
-                <button witdh="50" title="Consultar" class="btn btn-default btn-sm btn-toggle"  data-element="#divGridConsultaAl" onclick="ConsultarProvas()">Consultar</button>
+                <button witdh="50" title="Consultar" class="btn btn-default btn-sm btn-toggle" data-element="#divGridConsultaAl" onclick="ConsultarProvas()">Consultar</button>
             </td>@*//remover btn-toggle e data-element*@
         </tr>
     </table>
@@ -41,7 +40,7 @@
         <div class="col-lg-3">
             <button witdh="50" title="Realizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#RealizarProva">Realizar</button>
             @*<button witdh="50" title="Corrigir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Solicitar</button>
-    <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" onclick="VisualizarAl()">Visualizar</button>*@
+                <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" onclick="VisualizarAl()">Visualizar</button>*@
         </div>
     </div>
     <div>
@@ -72,8 +71,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title">Solicitar Revisão:</h4>
+                <h4 class="modal-title">Solicitar Revisão</h4>
             </div>
             <div class="modal-body">
                 <p>Você deseja solicitar uma revisão dessa prova? (nomeDaProva)</p>

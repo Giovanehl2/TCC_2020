@@ -4,52 +4,51 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Analyser</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="nav navbar-nav navbar-brand">
-                    <a id="menu-toggle" href="@Url.Action("TelaInicial", "TelaInicial")">Test Analyser</a>
-                </div>
-            </div>
-            <div id="divMenu" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <li id="1"><a href="@Url.Action("ConsultarProvaAl", "ConsultarProvaAl")">Consultar Provas</a></li>
-                    <li id="2"><a href="@Url.Action("ConsultarProvaPr", "ConsultarProvaPr")">Consultar Provas</a></li>
-                    <li id="3"><a href="@Url.Action("GerarProva", "GerarProva")">Gerar Prova</a></li>
-                    <li id="4"><a href="@Url.Action("CadastrarQuestoes", "CadastrarQuestoes")">Cadastrar Questões</a></li>
-                    <li id="5"><a href="@Url.Action("ConsultarQuestoes", "ConsultarQuestoes")">Consultar Questões</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li id="6"><a href="@Url.Action("Configuracoes", "Configuracoes")"><span class="glyphicon glyphicon-cog"></span>  Configurações </a></li>
-                    <li><a href="#" id="usermenu" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-user "></span> &nbsp; @((Session["NomeUsuario"]))</a></li>
-                    <li><a href="@Url.Action("Login", "Login")"><span class="glyphicon glyphicon-log-out "></span> Sair </a></li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="nav-link" id="menu-toggle" href="@Url.Action("TelaInicial", "TelaInicial")"><h3>Test Analyser</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("ConsultarProvaAl", "ConsultarProvaAl")">Consultar Provas</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("ConsultarProvaPr", "ConsultarProvaPr")">Consultar Provas</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("GerarProva", "GerarProva")">Gerar Prova</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("CadastrarQuestoes", "CadastrarQuestoes")">Cadastrar Questões</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("ConsultarQuestoes", "ConsultarQuestoes")">Consultar Questões</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="6"><a href="@Url.Action("Configuracoes", "Configuracoes")"><span class="glyphicon glyphicon-cog"></span>  Configurações </a></li>
+                <li>
+                    <a href="#" id="usermenu" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user "></span> &nbsp; @((Session["NomeUsuario"]))
+                    </a>
+                </li>
+                <li><a href="@Url.Action("Login", "Login")"><span class="glyphicon glyphicon-log-out "></span> Sair </a></li>
+            </ul>
         </div>
-    </div>
-    <div class="container body-content">
+    </nav>
+
+    <div class="container">
+
         @RenderBody()
         <hr />
-        <footer>
-            
-        </footer>
+
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-
     <script>
 
         window.load = verifica_na();
@@ -74,8 +73,11 @@
                 document.getElementById("5").style.visibility = "hidden";
             }
         }
-        
+
     </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
