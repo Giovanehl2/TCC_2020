@@ -8,23 +8,55 @@
     <br />
 
     <div>
-        <div>
-            <label>URL - WebService</label>
+        
+
+            @*horario de correção*@
+
+        <form>
+            <div class="form-row">
+                <div class="col-md-4">
+                    <label for="UrlWebService">URL - WebService</label>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="UrlWeb">
+                        </div>
+                        <div class="col-md-2">
+                            <button witdh="50" title="Sinc" class="btn btn-default btn-sm" onclick="SincNow()">Sincronizar Agora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <br />
-            <input class="setep" type="text" name="UrlLink" value="" id="UrlLink" placeholder="url:" />
-            <button witdh="50" title="Sinc" class="btn btn-default btn-sm" onclick="SincNow()">Sincronizar Agora</button>
-        </div>
-        <br /><br />
-        <table class="tablep2 thc">
-            <tr>
-                <th class="thc">Sincronização Automatica (Data):</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td><input class="setep thc" type="text" name="SincAuto" value="" id="SincAuto" placeholder="11" /></td>
-                <td><button witdh="50" title="SincAuto" class="btn btn-default btn-sm" onclick="SalvarSincAuto()">Salvar</button></td>
-            </tr>
-        </table>
+            <br />
+            <div class="form-row">
+                <div class="col-md-4">
+                    <label for="SincronizacaoAut">Sincronização Automatica (Data)</label>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="SincAut">
+                        </div>
+                        <div class="col-md-2">
+                            <button witdh="50" title="SincAuto" class="btn btn-default btn-sm" onclick="SalvarSincAuto()">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="form-row">
+                <div class="col-md-4">
+                    <label for="HorarioCorrecao">Horário de correção</label>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="HorarioCorrecao">
+                        </div>
+                        <div class="col-md-2">
+                            <button witdh="50" class="btn btn-default btn-sm">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
         <br />
     </div>
 </div>
