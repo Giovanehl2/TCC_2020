@@ -13,5 +13,10 @@ namespace TestAnalyser.Controllers
         {
             return View();
         }
+
+        public ActionResult CorrigirProva()
+        {
+            return View();
+        }
     }
 }

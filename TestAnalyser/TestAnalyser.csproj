@@ -221,7 +221,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\cssgabriel.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.min.css" />
     <Content Include="Content\font-awesome.css" />
@@ -286,6 +286,7 @@
     <Content Include="Views\ConsultarQuestoes\ConsultarQuestoes.cshtml" />
     <Content Include="Views\ProvasAgendadas\ProvasAgendadas.cshtml" />
     <Content Include="Views\ConsultarProvaAl\RealizarProva.cshtml" />
+    <Content Include="Views\ConsultarProvaPr\CorrigirProva.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
