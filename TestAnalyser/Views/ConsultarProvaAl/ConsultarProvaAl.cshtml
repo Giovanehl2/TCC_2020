@@ -38,10 +38,10 @@
             <input class="novep" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
         </div>
         <div class="col-lg-3">
-            
-            <a class="btn btn-default btn-sm" href="@Url.Action("RealizarProva", "ConsultarProvaAl")">Realizar</a>
-            @*<button witdh="50" title="Corrigir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Solicitar</button>
-        <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" onclick="VisualizarAl()">Visualizar</button>*@
+            <button witdh="50" title="Realizar" class="btn btn-default btn-sm" onclick="RealizarProva()">Realizar</button>
+            @*<a class="btn btn-default btn-sm" href="@Url.Action("RealizarProva", "ConsultarProvaAl")">Realizar</a>*@
+            @* <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva"">Visualizar</button>
+            <button witdh="50" title="Solcitar Revisão" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Solicitar</button>*@
         </div>
     </div>
     <div>
@@ -50,8 +50,8 @@
         </div>
         <div class="col-lg-3">
             @*<button witdh="50" title="Realizar" class="btn btn-default btn-sm" onclick="RealizarProva()">Realizar</button>*@
-            <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" onclick="VisualizarAl()">Visualizar</button>
-            <button witdh="50" title="Corrigir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Revisar</button>
+            <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva"">Visualizar</button>
+            <button witdh="50" title="Solcitar Revisão" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Revisar</button>
         </div>
     </div>
     <div>
@@ -60,8 +60,8 @@
         </div>
         <div class="col-lg-3">
             @*<button witdh="50" title="Realizar" class="btn btn-default btn-sm" onclick="RealizarProva()">Realizar</button>*@
-            <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" onclick="VisualizarAl()">Visualizar</button>
-            @*<button witdh="50" title="Corrigir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Solicitar</button>*@
+            <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
+            @*<button witdh="50" title="Solcitar Revisão" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Solicitar</button>*@
         </div>
     </div>
 </div>
@@ -164,6 +164,107 @@
     </div>
 </div>
 
+@* modal de visualização de Prova (sem corrigir) *@
+<div class="modal fade novep" id="VisualizarProva">
+    <div class="modal-dialog novep">
+        <div class="modal-content">
+            <div>
+
+                <div class="container">
+                    <br />
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h5>Questão 1</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <input class="form-control" id="questao1" type="text" value="Quanto é 1 + 1" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h5>Resposta 1</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <input class="form-control" id="resposta1" type="text" value="42" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h5>Observações</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <input class="form-control" id="obsevações" type="text" value="Vejá bem, aqui parece que está algo errado." disabled>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h5>Questão 2</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <input class="form-control" id="questao2" type="text" value="Quanto é 2 * 2" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h5>Resposta 2</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <input class="form-control" id="resposta2" type="text" value="4" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h5>Observações</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <input class="form-control" id="obsevações" type="text" value="" disabled>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="row">
+                        <div class="col-md-5 offset-md-1">
+                            <h5>Nota</h5>
+                            <input class="form-control" id="nota" type="text" value="5,0" disabled>
+                        </div>
+                        <div class="col-md-5 offset-md-1">
+                            <button witdh="50" title="Fechar" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
 
     function SolicitarRevisao() {
@@ -174,6 +275,10 @@
     function SalvarProva() {
         console.log("Prova Realizada...");
         $('#RealizarProva').modal('hide');
+    }
+
+    function RealizarProva() {
+        location.href = "http://localhost:54994/ConsultarProvaAl/RealizarProva";
     }
 
     $(function () { @*//remover*@
