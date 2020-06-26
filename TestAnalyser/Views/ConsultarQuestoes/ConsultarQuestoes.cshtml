@@ -36,32 +36,38 @@
 
 <div id="divGridConsultaQuestao" style="display:none">
     @*Só visualização, deverá ser feito por um grid de grid que carrega depois da consulta...*@
-    <div>
-        <div class="col-lg-9">
-            <input class="novep" type="text" name="Detahes" value="" id="Detahes" placeholder="Disciplina - Assunto - Enunciado..." />
-        </div>
-        <div class="col-lg-3">
-            <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarQuestao()">Editar</button>
-            <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaExcluir">Excluir</button>
-        </div>
-    </div>
-    <div>
-        <div class="col-lg-9">
-            <input class="novep" type="text" name="Detahes" value="" id="Detahes" placeholder="Disciplina - Assunto - Enunciado..." />
-        </div>
-        <div class="col-lg-3">
-            <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarQuestao()">Editar</button>
-            <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ErroExcluir">Excluir</button>
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-9">
+                <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Disciplina - Assunto - Enunciado..." />
+            </div>
+            <div class="col-lg-3">
+                <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarQuestao()">Editar</button>
+                <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaExcluir">Excluir</button>
+            </div>
         </div>
     </div>
-    <div>
-        <div class="col-lg-9">
-            <input class="novep" type="text" name="Detahes" value="" id="Detahes" placeholder="Disciplina - Assunto - Enunciado..." />
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-9">
+                <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Disciplina - Assunto - Enunciado..." />
+            </div>
+            <div class="col-lg-3">
+                <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarQuestao()">Editar</button>
+                <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ErroExcluir">Excluir</button>
+            </div>
         </div>
-        <div class="col-lg-3">
-            <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarQuestao()">Editar</button>
-            <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaExcluir">Excluir</button>
-            @*<button witdh="50" title="Visualizar" class="btn btn-default btn-sm" onclick="VisualizarAl()">Visualizar</button>*@
+    </div>
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-9">
+                <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Disciplina - Assunto - Enunciado..." />
+            </div>
+            <div class="col-lg-3">
+                <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarQuestao()">Editar</button>
+                <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaExcluir">Excluir</button>
+                @*<button witdh="50" title="Visualizar" class="btn btn-default btn-sm" onclick="VisualizarAl()">Visualizar</button>*@
+            </div>
         </div>
     </div>
 </div>
@@ -72,6 +78,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Excluir questão</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
                 <p>Você deseja Excluir essa questão?</p>
@@ -89,8 +96,8 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
                 <h4 class="modal-title">Não é Possível Excluir:</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
                 <p>Essa questão já está vinculada a uma prova, você deve Inativa-la!</p>

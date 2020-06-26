@@ -16,8 +16,8 @@
             <th>    </th>
         </tr>
         <tr>
-            <td><input type="checkbox" id="chbxPendentes" name="Pendentes" value="Pend" /></td>
-            <td><input class="" type="text" name="DataProva" value="" id="DataProva" placeholder="11/05/2020" /></td>
+            <td><input type="checkbox" id="chbxPendentes" name="Pendentes" value="" /></td>
+            <td><input class="" type="date" name="DataProva" value="" id="DataProva"/></td>
             <td>
                 <select class="form-control" id="Disciplina" name="Disciplina">
                     <option>Selecionar</option>
@@ -51,44 +51,69 @@
             </tr>
         </table>*@
     <div id="divGridConsultaPr">
-        
-        <form>
-
-
-
-        </form>
-        <div>
-            <div class="col-lg-8">
-                <input class="novep" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto - Aluno" />
-            </div>
-            <div class="col-lg-4">
-                <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
-                <button witdh="50" title="Corrigir" class="btn btn-default btn-sm" onclick="CorrigirProva()">Corrigir</button>
-                @*<button witdh="50" title="Corrigir" class="btn btn-default btn-sm" onclick="CorrigirPr()">Corrigir</button>*@
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-8">
+                    <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
+                </div>
+                <div class="col-lg-4">
+                    <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
+                    <button witdh="50" title="Corrigir" class="btn btn-default btn-sm" onclick="CorrigirProva()">Corrigir</button>
+                    @*<button witdh="50" title="Corrigir" class="btn btn-default btn-sm" onclick="CorrigirPr()">Corrigir</button>*@
+                </div>
             </div>
         </div>
         @*Só visualização, deverá ser feito por um grid de grid que carrega depois da consulta...*@
-        <div>
-            <div class="col-lg-8">
-                <input class="novep" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto - Aluno" />
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-8">
+                    <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
+                </div>
+                <div class="col-lg-4">
+                    <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
+                    <button witdh="50" title="Corrigir" class="btn btn-default btn-sm" onclick="CorrigirProva()">Corrigir</button>
+                    @*<button witdh="50" title="Corrigir" class="btn btn-default btn-sm" onclick="CorrigirPr()">Corrigir</button>*@
+                </div>
             </div>
-            <div class="col-lg-4">
-                <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
-                <button witdh="50" title="Corrigir" class="btn btn-default btn-sm" onclick="CorrigirProva()">Corrigir</button>
-                @*<button witdh="50" title="Corrigir" class="btn btn-default btn-sm" onclick="CorrigirPr()">Corrigir</button>*@
+        </div>
+    </div>
+
+    @* excluir posteriormente tambem... *@
+    <div id="divGridConsultaProvaPend" style="display:none">
+        @*Essa consulta deve ser com base no cheackbox de "Pend", = pendentes = não realizadas ainda...*@
+        <div id="divGridConsultaPr">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
+                    </div>
+                    <div class="col-lg-4">
+                        <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarProva()">Editar</button>
+                        <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ExcluirProva">Excluir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
+                    </div>
+                    <div class="col-lg-4">
+                        <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarProva()">Editar</button>
+                        <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ExcluirProva">Excluir</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <br />
-<div><br /></div>
-
 
 
 
 @* modal de visualização de Prova (sem corrigir) *@
 <div class="modal fade novep" id="VisualizarProva">
-    <div class="modal-dialog novep">
+    <div class="modal-dialog" style="min-width: 50%;">
         <div class="modal-content">
             <div>
 
@@ -182,31 +207,6 @@
                     </div>
                     <br />
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@* excluir posteriormente tambem... *@
-<div id="divGridConsultaProvaPend" style="display:none">
-    @*Essa consulta deve ser com base no cheackbox de "Pend", = pendentes = não realizadas ainda...*@
-    <div class="col-lg-12">
-        <div id="divGridConsultaPr">
-            <div class="col-lg-8">
-                <input class="novep" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
-            </div>
-            <div class="col-lg-4">
-                <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarProva()">Editar</button>
-                <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ExcluirProva">Excluir</button>
-            </div>
-        </div>
-        <div>
-            <div class="col-lg-8">
-                <input class="novep" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
-            </div>
-            <div class="col-lg-4">
-                <button witdh="50" title="Editar" class="btn btn-default btn-sm" onclick="EditarProva()">Editar</button>
-                <button witdh="50" title="Excluir" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ExcluirProva">Excluir</button>
             </div>
         </div>
     </div>
