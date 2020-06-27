@@ -199,9 +199,11 @@
                 </div>
             </div>
             <div class=form-row>
-                <button witdh="50" title="Criar" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#DivGerarProva">Criar</button>
+
+
             </div>
         </form>
+        <button class="btn btn-primary btn-sm" witdh="50" title="Criar" onclick="AdicionarQuestoesNaProva()">Criar</button>
     </div>
 </div>
 
@@ -288,6 +290,7 @@
             </div>
             <div>
                 <label>&nbsp;</label>
+
                 <button witdh="50" title="Salvar" class="btn btn-default btn-sm btn-diss btn-orange" onclick="SalvarProva()">Salvar Prova</button>
             </div>
         </div>
@@ -302,11 +305,11 @@
         $('#DivGerarProva').modal('hide');
         location.href = "http://localhost:54994/GerarProva/GerarProva";
     }
-
-    function TrocarQuestao() {
-
+    
+    function AdicionarQuestoesNaProva() {
+        location.href = "http://localhost:54994/GerarProva/AdicionarQuestoesNaProva";
     }
-
+    
     //$(function () {
     //    $(".btn-toggle").click(function (e) {
     //        e.preventDefault();

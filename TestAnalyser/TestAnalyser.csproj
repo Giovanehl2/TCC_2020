@@ -287,6 +287,7 @@
     <Content Include="Views\ProvasAgendadas\ProvasAgendadas.cshtml" />
     <Content Include="Views\ConsultarProvaAl\RealizarProva.cshtml" />
     <Content Include="Views\ConsultarProvaPr\CorrigirProva.cshtml" />
+    <Content Include="Views\GerarProva\AdicionarQuestoesNaProva.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
