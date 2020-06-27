@@ -11,7 +11,14 @@
             <h3>Questão 1</h3>
             <textarea class="" style="min-width: 100%;" cols="30" rows="2" wrap="hard" name="DTquestao" id="DTquestao" placeholder="Pergunta numero 1 da prova"></textarea>
         </div>
-        
+        <div class="col-md-1">
+            <br />
+            <button witdh="50" title="Alterar Questão" class="btn btn-primary glyphicon glyphicon-refresh" onclick="TrocarQuestão()">Trocar</button>
+        </div>
+        <div class="col-md-1">
+            <h6>Nota: </h6>
+            <input class="form-control" type="number" id="NotaQ" />
+        </div>
     </div>
 </div>
 <div class="col-md-12">
@@ -32,7 +39,14 @@
             <h3>Questão 2</h3>
             <textarea class="" style="min-width: 100%;" cols="30" rows="2" wrap="hard" name="DTquestao" id="DTquestao" placeholder="Pergunta numero 2 da prova"></textarea>
         </div>
-        
+        <div class="col-md-1">
+            <br />
+            <button witdh="50" title="Alterar Questão" class="btn btn-primary glyphicon glyphicon-refresh" onclick="TrocarQuestão()">Trocar</button>
+        </div>
+        <div class="col-md-1">
+            <h6>Nota: </h6>
+            <input class="form-control" type="number" id="NotaQ" />
+        </div>
     </div>
 </div>
 <div class="col-md-12">
@@ -50,3 +64,15 @@
 <div class="col-md-12">
     <button witdh="50" title="Confirmar prova" class="btn btn-primary" onclick="SalvarProva()">Confirmar Prova</button>
 </div>
+
+
+
+<script>
+    function SalvarProva() {
+        console.log("Prova Criada e Salva...");
+        $('#DivGerarProva').modal('hide');
+        location.href = "http://localhost:54994/GerarProva/GerarProva";
+    }
+
+
+</script>
