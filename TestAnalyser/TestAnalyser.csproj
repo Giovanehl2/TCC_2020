@@ -200,7 +200,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ProvasAgendadasController.cs" />
     <Compile Include="Controllers\TelaInicialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -208,6 +207,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Modelos\Login.cs" />
     <Compile Include="Models\Modelos\RespDissAluno.cs" />
     <Compile Include="Models\Modelos\VerdadeiroFalso.cs" />
     <Compile Include="Models\Modelos\Dissertativa.cs" />
@@ -227,6 +227,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\logo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -284,7 +285,6 @@
     <Content Include="Views\Shared\_Login.cshtml" />
     <Content Include="Views\Configuracoes\Configuracoes.cshtml" />
     <Content Include="Views\ConsultarQuestoes\ConsultarQuestoes.cshtml" />
-    <Content Include="Views\ProvasAgendadas\ProvasAgendadas.cshtml" />
     <Content Include="Views\ConsultarProvaAl\RealizarProva.cshtml" />
     <Content Include="Views\ConsultarProvaPr\CorrigirProva.cshtml" />
     <Content Include="Views\GerarProva\AdicionarQuestoesNaProva.cshtml" />

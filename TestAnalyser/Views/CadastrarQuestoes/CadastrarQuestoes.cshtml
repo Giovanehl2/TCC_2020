@@ -1,6 +1,24 @@
-﻿@{
+﻿@model TestAnalyser.Models.Modelos.Login
+
+@{
     ViewBag.Title = "Cadastrar Questões";
 }
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
 
 <h2>Cadastrar Questoes</h2>
 <div class="col-lg-12 tab-content">
@@ -36,7 +54,7 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="SErdA" name="SEradio"/>
+                            <input type="radio" id="SErdA" name="SEradio" />
                             <label for="A">A)</label>
                         </div>
                         <div class="col-md-10">
@@ -45,7 +63,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="SErdB"  name="SEradio"/>
+                            <input type="radio" id="SErdB" name="SEradio" />
                             <label for="B">B)</label>
                         </div>
                         <div class="col-md-10">
@@ -54,7 +72,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="SErdC" name="SEradio"/>
+                            <input type="radio" id="SErdC" name="SEradio" />
                             <label for="C">C)</label>
                         </div>
                         <div class="col-md-10">
@@ -63,7 +81,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="SErdD" name="SEradio"/>
+                            <input type="radio" id="SErdD" name="SEradio" />
                             <label for="D">D)</label>
                         </div>
                         <div class="col-md-10">
@@ -72,7 +90,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="SErdE" name="SEradio"/>
+                            <input type="radio" id="SErdE" name="SEradio" />
                             <label for="E">E)</label>
                         </div>
                         <div class="col-md-10">
@@ -95,7 +113,7 @@
             </div>
         </form>
 
-        
+
     </div>
 
     <div id="divME" class="tab-pane fade">
@@ -184,7 +202,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="checkbox" id="MEcbB"/>
+                            <input type="checkbox" id="MEcbB" />
                             <label for="B">B)</label>
                         </div>
                         <div class="col-md-10">
@@ -211,7 +229,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="checkbox" id="MEcbE"/>
+                            <input type="checkbox" id="MEcbE" />
                             <label for="E">E)</label>
                         </div>
                         <div class="col-md-10">
@@ -303,7 +321,7 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="VFrdA" name="VFradio"/>
+                            <input type="radio" id="VFrdA" name="VFradio" />
                             <label for="A">A)</label>
                         </div>
                         <div class="col-md-10">
@@ -312,7 +330,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="VFrdB" name="VFradio"/>
+                            <input type="radio" id="VFrdB" name="VFradio" />
                             <label for="B">B)</label>
                         </div>
                         <div class="col-md-10">
@@ -321,7 +339,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="VFrdC" name="VFradio"/>
+                            <input type="radio" id="VFrdC" name="VFradio" />
                             <label for="C">C)</label>
                         </div>
                         <div class="col-md-10">
@@ -330,7 +348,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="VFrdD"  name="VFradio"/>
+                            <input type="radio" id="VFrdD" name="VFradio" />
                             <label for="D">D)</label>
                         </div>
                         <div class="col-md-10">
@@ -367,8 +385,26 @@
             </div>
             <div class="form-row">
                 <div class="col-md-8">
-                    <label for="EnuncuadoDT">Enunciado</label>
-                    <textarea class="form-control" id="EnuncuadoDT"></textarea>
+                    @*<label for="EnuncuadoDT">Enunciado</label>
+                        <textarea class="form-control" id="EnuncuadoDT"></textarea>*@
+
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                    {
+
+                        <label for="EnuncuadoDT">Enunciado</label>
+                        @Html.TextAreaFor(m => m.PersonalDetails)
+                        @Html.ValidationMessageFor(m => m.PersonalDetails, "", new { @class = "error" })
+                        <br /><br />
+                        @*<input type="submit" value="Submit" />
+                        <br />*@
+                        <span>@Html.Raw(Model.PersonalDetails)</span>
+                    }
+                    @Scripts.Render("~/bundles/jquery")
+                    <script type="text/javascript" src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+                    <script type="text/javascript">
+                        tinymce.init({ selector: 'textarea', width: 500 });
+                    </script>
+
                 </div>
             </div>
             <div class="form-row">
@@ -389,7 +425,7 @@
 
 @*Cada botão, caixa de texto, e outros atributos da tela tem sua ID especifica, para salvar deverá ser resgatado os valores atraves dessas ID's*@
 
-    @*<script>
+@*<script>
 
         function AddLinha() {
 

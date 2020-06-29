@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TestAnalyser.Models.Modelos;
 
 namespace TestAnalyser.Controllers
 {
@@ -12,7 +13,13 @@ namespace TestAnalyser.Controllers
         //ActionResult para apresetar a tela de cadastro de questões...
         public ActionResult CadastrarQuestoes()
         {
-            return View();
+            return View(new Login());
+        }
+
+        [HttpPost]
+        public ActionResult CadastrarQuestoes(Login person)
+        {
+            return View(person);
         }
 
         //Metodo para cadastrar a questão de tipo especifico no banco...

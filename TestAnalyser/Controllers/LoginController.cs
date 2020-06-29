@@ -18,8 +18,22 @@ namespace TestAnalyser.Controllers
         [HttpPost]
         public ActionResult Login(FormCollection collection)
         {
-            int NA = 2;
             string NomeUser = collection["inputUsuario"].Trim();
+            int NA = 0;
+            if (NomeUser == "Professor")
+            {
+                NA = 2;
+                NomeUser = "Xosbacon";
+            } else if (NomeUser == "Aluno")
+            {
+                NA = 1;
+                NomeUser = "Pedrão Stark";
+            }
+            else
+            {
+                NA = 3;
+                NomeUser = "Cara da TI";
+            }
             //A view passa os valores preenchidos, depois verificar se são validos com o WebService e retornar para a tela inicial...
 
             Session["NivelAcesso"] = NA;
