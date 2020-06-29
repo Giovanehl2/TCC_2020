@@ -3,7 +3,7 @@
     ViewBag.Title = "VisualizarTodasAsProvas";
 }
 
-<h2>Visualizar todas as provas</h2>
+<h2>Visualizar todas as provas por aluno</h2>
 <br />
 
 <div class="container">
@@ -37,6 +37,58 @@
 
         </div>
     </div>
+    <div class="row">
+        <h3>Provas</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Data</th>
+                    <th scope="col">Disciplina</th>
+                    <th scope="col">Turma</th>
+                    <th scope="col">Assunto</th>
+                    <th>Ações</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>21/02/2020</td>
+                    <td>Gestão de T.I</td>
+                    <td>3° A</td>
+                    <td>Gerenciamento de riscos</td>
+                    <td>
+                        <button witdh="50" title="Visualizar" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
+                        <button witdh="50" title="Corrigir" class="btn btn-primary btn-sm" onclick="CorrigirProva()">Corrigir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>21/02/2020</td>
+                    <td>Gestão de T.I</td>
+                    <td>3° A</td>
+                    <td>Gerenciamento de riscos</td>
+                    <td>
+                        <button witdh="50" title="Visualizar" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
+                        <button witdh="50" title="Corrigir" class="btn btn-primary btn-sm" onclick="CorrigirProva()">Corrigir</button>
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td>21/02/2020</td>
+                    <td>Gestão de T.I</td>
+                    <td>3° A</td>
+                    <td>Gerenciamento de riscos</td>
+                    <td>
+                        <button witdh="50" title="Visualizar" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
+                        <button witdh="50" title="Corrigir" class="btn btn-primary btn-sm" onclick="CorrigirProva()">Corrigir</button>
+                    </td>
+
+
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
 </div>
     
     <br />
@@ -44,6 +96,7 @@
             <tr>
             </tr>
         </table>*@
+<!--
     <div id="divGridConsultaPr">
 
         <div class="col-lg-12">
@@ -69,7 +122,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
     @* excluir posteriormente tambem... *@
     <div id="divGridConsultaProvaPend" style="display:none">
@@ -236,7 +289,7 @@
     }
 
     function CorrigirProva() {
-        location.href = "http://localhost:54994/ConsultarProvaPr/CorrigirProva";
+        location.href = "http://localhost:54994/ConsultarProvaPr/CorrigirProvaAlunoEspecifico";
     }
 
     var div1 = document.getElementById('divGridConsultaPr'),
