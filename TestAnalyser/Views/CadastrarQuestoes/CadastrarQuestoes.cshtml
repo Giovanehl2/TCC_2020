@@ -36,7 +36,7 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="SErdA" />
+                            <input type="radio" id="SErdA" name="SEradio"/>
                             <label for="A">A)</label>
                         </div>
                         <div class="col-md-10">
@@ -45,7 +45,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="SErdB" />
+                            <input type="radio" id="SErdB"  name="SEradio"/>
                             <label for="B">B)</label>
                         </div>
                         <div class="col-md-10">
@@ -54,7 +54,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="SErdC" />
+                            <input type="radio" id="SErdC" name="SEradio"/>
                             <label for="C">C)</label>
                         </div>
                         <div class="col-md-10">
@@ -63,7 +63,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="SErdD" />
+                            <input type="radio" id="SErdD" name="SEradio"/>
                             <label for="D">D)</label>
                         </div>
                         <div class="col-md-10">
@@ -72,7 +72,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="SErdE" />
+                            <input type="radio" id="SErdE" name="SEradio"/>
                             <label for="E">E)</label>
                         </div>
                         <div class="col-md-10">
@@ -86,7 +86,7 @@
                 <div class="col-md-3 offset-1">
                     @*tentativa de usar os glyphicons ... falha*@
                     <button witdh="50" title="Remover" class="btn-default glyphicon glyphicon-minus" onclick="RemoveLinha()"> - </button>
-                    <button witdh="50" title="Adicionar" class="btn-default glyphicon glyphicon-plus" onclick="AddLinha()">Adicionar Alternativa</button>
+                    <button witdh="50" title="Adicionar" class="btn-default glyphicon glyphicon-plus" onclick="AddLinha()"> + </button>
                 </div>
             </div>
             <br />
@@ -165,7 +165,7 @@
             <div class="form-row">
                 <div class="col-md-3 offset-1">
                     <button witdh="50" title="Remover Alternativa" class="btn-default" onclick="RemoveLinha()"> - </button>
-                    <button witdh="50" title="Adicionar Alternativa" class="btn-default" onclick="AddLinha()">Adicionar Alternativa</button>
+                    <button witdh="50" title="Adicionar Alternativa" class="btn-default" onclick="AddLinha()"> + </button>
                 </div>
             </div>
 
@@ -224,7 +224,7 @@
             <div class="form-row">
                 <div class="col-md-3 offset-1">
                     <button witdh="50" title="Remover Alternativa" class="btn-default" onclick="RemoveLinha()"> - </button>
-                    <button witdh="50" title="Adicionar Alternativa" class="btn-default" onclick="AddLinha()">Adicionar Alternativa</button>
+                    <button witdh="50" title="Adicionar Alternativa" class="btn-default" onclick="AddLinha()"> + </button>
                 </div>
             </div>
             <br />
@@ -303,7 +303,7 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="VFrdA" />
+                            <input type="radio" id="VFrdA" name="VFradio"/>
                             <label for="A">A)</label>
                         </div>
                         <div class="col-md-10">
@@ -312,7 +312,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="VFrdB" />
+                            <input type="radio" id="VFrdB" name="VFradio"/>
                             <label for="B">B)</label>
                         </div>
                         <div class="col-md-10">
@@ -321,7 +321,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="VFrdC" />
+                            <input type="radio" id="VFrdC" name="VFradio"/>
                             <label for="C">C)</label>
                         </div>
                         <div class="col-md-10">
@@ -330,7 +330,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1" style="padding-right: 10px;">
-                            <input type="radio" id="VFrdD" />
+                            <input type="radio" id="VFrdD"  name="VFradio"/>
                             <label for="D">D)</label>
                         </div>
                         <div class="col-md-10">
@@ -354,7 +354,7 @@
         </form>
     </div>
 
-
+    <script src="ckeditor/ckeditor.js"></script>
     <div id="divDT" class="tab-pane fade">
         <h5>Tipo: Dissertativa</h5>
         <br />
