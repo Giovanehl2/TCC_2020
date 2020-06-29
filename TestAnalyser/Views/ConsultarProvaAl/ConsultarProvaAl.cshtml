@@ -3,79 +3,177 @@
 }
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> @*//remover*@
 
-<h2>Consultar Provas</h2>
-<div>
-    <table class="table">
-        <tr>
-            <th>Data da Prova</th>
-            <th>Disciplinas</th>
-            <th>Turmas</th>
-            <th>    </th>
-        </tr>
-        <tr>
-            <td>
-                <input class="" type="date" name="DataProva" value="" id="DataProva" />
-            </td>
-            <td>
-                <select class="form-control" id="Disciplinas" name="Disciplinas">
-                    <option>Selecionar</option>
-                    <option>Disciplina1</option>
-                    <option>Disciplina2</option>
-                </select>
-            </td>
-            <td>
-                <select class="form-control" id="Turmas" name="Turmas">
-                    <option>Selecionar</option>
-                    <option>Turma1</option>
-                    <option>Turma2</option>
-                </select>
-            </td>
-            <td>
-                <button witdh="50" title="Consultar" class="btn btn-default btn-sm btn-toggle" data-element="#divGridConsultaAl" onclick="ConsultarProvas()">Consultar</button>
-            </td>@*//remover btn-toggle e data-element*@
-        </tr>
-    </table>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Consultar Provas</h2>
+            <br />
+            <form>
+                <div class="form-row">
+                    <div class="col-md-2">
+                        <div class="row">
+                            <div class="col">
+                                <label for="AssuntoSE">Data da prova</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control" type="date" name="DataProva" value="" id="DataProva" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="row">
+                            <div class="col">
+                                <label for="AssuntoSE">Disciplinas</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control" id="Disciplina" name="Disciplina">
+                                    <option>Selecionar</option>
+                                    <option>Disciplina 1</option>
+                                    <option>Disciplina 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <label for="AssuntoSE">Turmas</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control" id="Turma" name="Turma">
+                                    <option>Selecionar</option>
+                                    <option>Turma1</option>
+                                    <option>Turma2</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <button witdh="50" title="Consultar" class="btn btn-default btn-sm btn-toggle" data-element="#divGridConsultaAl" onclick="ConsultarProvas()">Consultar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row " id="divGridConsultaAl" style="display:none">
+        <div class="col-md-12">
+            <h3>Provas</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Disciplina</th>
+                        <th scope="col">Turma</th>
+                        <th scope="col">Assunto</th>
+                        <th>Ações</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>21/02/2020</td>
+                        <td>Gestão de T.I</td>
+                        <td>3° A</td>
+                        <td>Gerenciamento de riscos</td>
+                        <td>
+                            <button witdh="50" title="Realizar" class="btn btn-primary btn-sm" onclick="RealizarProva()">Realizar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>04/03/2020</td>
+                        <td>Sistemas operacionais</td>
+                        <td>2° C</td>
+                        <td>Segurança</td>
+                        <td>
+                            <button witdh="50" title="Visualizar" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#VisualizarProva" ">Visualizar</button>
+                            <button witdh="50" title="Solcitar Revisão" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Revisar</button>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>04/03/2020</td>
+                        <td>Sistemas operacionais</td>
+                        <td>2° C</td>
+                        <td>Segurança</td>
+                        <td>
+                            <button witdh="50" title="Visualizar" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
+                        </td>
+
+
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+            <!--
+
+    <div id="divGridConsultaAl" style="display:none">
+        @*Só visualização, deverá ser feito por um grid de grid que carrega depois da consulta...*@
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-9">
+                    <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
+                </div>
+                <div class="col-lg-3">
+                    <button witdh="50" title="Realizar" class="btn btn-default btn-sm" onclick="RealizarProva()">Realizar</button>
+                    @*<a class="btn btn-default btn-sm" href="@Url.Action("RealizarProva", "ConsultarProvaAl")">Realizar</a>*@
+                    @* <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva"">Visualizar</button>
+                <button witdh="50" title="Solcitar Revisão" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Solicitar</button>*@
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-9">
+                    <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
+                </div>
+                <div class="col-lg-3">
+                    @*<button witdh="50" title="Realizar" class="btn btn-default btn-sm" onclick="RealizarProva()">Realizar</button>*@
+                    <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva" ">Visualizar</button>
+                    <button witdh="50" title="Solcitar Revisão" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Revisar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-9">
+                    <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
+                </div>
+                <div class="col-lg-3">
+                    @*<button witdh="50" title="Realizar" class="btn btn-default btn-sm" onclick="RealizarProva()">Realizar</button>*@
+                    <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
+                    @*<button witdh="50" title="Solcitar Revisão" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Solicitar</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+        -->
+
+
+        </div>
+    </div>
 </div>
-<div id="divGridConsultaAl" style="display:none">
-    @*Só visualização, deverá ser feito por um grid de grid que carrega depois da consulta...*@
-    <div class="col-lg-12">
-        <div class="row">
-            <div class="col-lg-9">
-                <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
-            </div>
-            <div class="col-lg-3">
-                <button witdh="50" title="Realizar" class="btn btn-default btn-sm" onclick="RealizarProva()">Realizar</button>
-                @*<a class="btn btn-default btn-sm" href="@Url.Action("RealizarProva", "ConsultarProvaAl")">Realizar</a>*@
-                @* <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva"">Visualizar</button>
-                    <button witdh="50" title="Solcitar Revisão" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Solicitar</button>*@
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="row">
-            <div class="col-lg-9">
-                <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
-            </div>
-            <div class="col-lg-3">
-                @*<button witdh="50" title="Realizar" class="btn btn-default btn-sm" onclick="RealizarProva()">Realizar</button>*@
-                <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva" ">Visualizar</button>
-                <button witdh="50" title="Solcitar Revisão" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Revisar</button>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="row">
-            <div class="col-lg-9">
-                <input class="" style="min-width: 100%;" type="text" name="Detahes" value="" id="Detahes" placeholder="Data - Disciplina - Turma - Assunto" />
-            </div>
-            <div class="col-lg-3">
-                @*<button witdh="50" title="Realizar" class="btn btn-default btn-sm" onclick="RealizarProva()">Realizar</button>*@
-                <button witdh="50" title="Visualizar" class="btn btn-default btn-sm" data-toggle="modal" data-target="#VisualizarProva">Visualizar</button>
-                @*<button witdh="50" title="Solcitar Revisão" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ConfirmaRevisao">Solicitar</button>*@
-            </div>
-        </div>
-    </div>
-</div>
+    
+        
+
+
+
 
 
 

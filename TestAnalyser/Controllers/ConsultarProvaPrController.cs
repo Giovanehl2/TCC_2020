@@ -18,5 +18,15 @@ namespace TestAnalyser.Controllers
         {
             return View();
         }
+
+        public ActionResult VisualizarTodasAsProvas()
+        {
+            return View();
+        }
+
+        public ActionResult CorrigirProvaAlunoEspecifico()
+        {
+            return View();
+        }
     }
 }
