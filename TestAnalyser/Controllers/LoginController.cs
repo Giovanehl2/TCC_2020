@@ -23,16 +23,13 @@ namespace TestAnalyser.Controllers
             if (NomeUser == "Professor")
             {
                 NA = 2;
-                NomeUser = "Xosbacon";
             } else if (NomeUser == "Aluno")
             {
                 NA = 1;
-                NomeUser = "Pedrão Stark";
             }
             else
             {
                 NA = 3;
-                NomeUser = "Gestor TI";
             }
             //A view passa os valores preenchidos, depois verificar se são validos com o WebService e retornar para a tela inicial...
 
