@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-12">
 
-            <form>
+            <form action="#">
                 <div class="form-row">
 
                     <div class="col-md-1">
@@ -91,7 +91,7 @@
                                 </select>
                             </div>
                             <div class="col">
-                                <button id="btnConsult" witdh="50" title="Consultar" class="btn btn-default btn-sm btn-toggle" onclick="ConsultarProvasPend()">Consultar</button>
+                                <button id="btnConsult" witdh="50" title="Consultar" class="btn btn-default btn-sm btn-toggle" @*onclick="ConsultarProvasPend()"*@>Consultar</button>
                             </div>
                         </div>
                     </div>
@@ -125,6 +125,10 @@
                             <button witdh="50" title="Visualizar" class="btn btn-primary btn-sm" onclick="VisualisarTodasAsProvas()"> Visualizar</button>
                             <button witdh="50" title="Corrigir" class="btn btn-primary btn-sm" onclick="CorrigirProvaAlunoEspecifico()">Corrigir</button>
                         </div>
+                        <div id="divGridConsultaProvaPend1" style="display:none">
+                            <button witdh="50" title="Editar" class="btn btn-primary btn-sm" onclick="EditarProva()">Editar</button>
+                            <button witdh="50" title="Excluir" class="btn btn-primary btn-sm" onclick="ExcluirProvaModal()">Excluir</button>
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -137,7 +141,7 @@
                             <button witdh="50" title="Visualizar" class="btn btn-primary btn-sm" onclick="VisualisarTodasAsProvas()"> Visualizar</button>
                             <button witdh="50" title="Corrigir" class="btn btn-primary btn-sm" onclick="CorrigirProvaAlunoEspecifico()">Corrigir</button>
                         </div>
-                        <div id="divGridConsultaProvaPend" style="display:none">
+                        <div id="divGridConsultaProvaPend2" style="display:none">
                             <button witdh="50" title="Editar" class="btn btn-primary btn-sm" onclick="EditarProva()">Editar</button>
                             <button witdh="50" title="Excluir" class="btn btn-primary btn-sm" onclick="ExcluirProvaModal()">Excluir</button>
                         </div>
@@ -199,17 +203,20 @@
 
     var div1 = document.getElementById('divGridConsultaPr1'),
         div2 = document.getElementById('divGridConsultaPr2');
-        div3 = document.getElementById('divGridConsultaProvaPend');
+        div3 = document.getElementById('divGridConsultaProvaPend1');
+        div4 = document.getElementById('divGridConsultaProvaPend2');
     function switchVisible() {
         if (!div1) return;
         if (getComputedStyle(div1).display == 'block') {
             div1.style.display = 'none';
             div2.style.display = 'none';
             div3.style.display = 'block';
+            div4.style.display = 'block';
         } else {
             div1.style.display = 'block';
             div2.style.display = 'block';
             div3.style.display = 'none';
+            div4.style.display = 'none';
         }
     }
     document.getElementById('btnConsult').addEventListener('click', switchVisible);

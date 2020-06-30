@@ -32,7 +32,7 @@ namespace TestAnalyser.Controllers
             else
             {
                 NA = 3;
-                NomeUser = "Cara da TI";
+                NomeUser = "Gestor TI";
             }
             //A view passa os valores preenchidos, depois verificar se são validos com o WebService e retornar para a tela inicial...
 
