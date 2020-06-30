@@ -25,15 +25,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="row">
                                 <div class="col">
-                                    <label for="AssuntoSE">Questão:</label>
+                                    <label for="AssuntoSE">Tipo de questão:</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <input type="number" class="form-control" id="Aluno">
+                                    <select class="form-control" id="Turmas" name="Turmas">
+                                        <option>Dissertativa</option>
+                                        <option>Multipla escolha</option>
+                                        <option>Simples escolha</option>
+                                        <option>Verdadeira ou falso</option>
+                                    </select>
                                 </div>
                                 <div class="col">
                                     <input type="button" class="btn btn-primary" id="VisualizarPorAluno" value="Pesquisar">
